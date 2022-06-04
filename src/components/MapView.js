@@ -9,9 +9,9 @@ import Map, {
 } from "react-map-gl";
 import axios from "axios";
 import { config } from "../config";
-import Pin from "./Pin";
-
 import "mapbox-gl/dist/mapbox-gl.css";
+
+import Pin from "./Pin";
 import DetailInfo from "./DetailInfo";
 
 const MAPBOX_TOKEN =
@@ -20,7 +20,7 @@ const MAPBOX_TOKEN =
 export default function MapView() {
   const [popupInfo, setPopupInfo] = useState(null);
   const [response, setResponse] = useState();
-  const URL = config.api_host ;
+  const URL = config.api_host;
 
   useEffect(() => {
     (async () => {
@@ -80,6 +80,7 @@ export default function MapView() {
           longitude={Number(popupInfo.geometry.coordinates[0])}
           latitude={Number(popupInfo.geometry.coordinates[1])}
           onClose={() => setPopupInfo(null)}
+          style={{ width: 150 }}
         >
           <DetailInfo popupInfo={popupInfo} />
         </Popup>
