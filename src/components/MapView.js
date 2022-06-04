@@ -14,8 +14,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import Pin from "./Pin";
 import DetailInfo from "./DetailInfo";
 
-const MAPBOX_TOKEN =
-  "pk.eyJ1IjoibWhhbmlmbXVoc2luIiwiYSI6ImNsM3llbmFiYTA3MG0zcG13cm93em05NjAifQ.qURzufWxT30a86dY19EGvQ"; // Set your mapbox token here
+const MAPBOX_TOKEN = ""; // Set your mapbox token here
 
 export default function MapView() {
   const [popupInfo, setPopupInfo] = useState(null);
